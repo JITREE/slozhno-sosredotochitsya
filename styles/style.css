@@ -242,13 +242,12 @@
     margin-top: 180px;
     font-size: 120px;
     line-height: 99px;
-    letter-spacing: 5px;
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   }
 
   .header__sub-title{
     margin-top: 160px;
-    letter-spacing: 1px;
+    font-size: clamp(1.125rem, 1.125rem + 0vw, 1.125rem);
     width: 364px;
   }
 
@@ -262,17 +261,17 @@
 
   .block-title{
     margin: 10px;
-    letter-spacing: 1px;
+    font-size: clamp(1.125rem, 1.125rem + 0vw, 1.125rem);
   }
 
   .sub-block-title{
     margin: 9px 10px 0 10px;
-    letter-spacing: 1px;
+    font-size: clamp(1.125rem, 1.125rem + 0vw, 1.125rem);
   }
 
   .sub-block-text{
     margin: 10px 10px 0 10px;
-    letter-spacing: 1px;
+    font-size: clamp(1.125rem, 1.125rem + 0vw, 1.125rem);
   }
 
   .low-attantion{
@@ -319,8 +318,7 @@
   }
 
   .footer-title{
-    margin-top: 320px;
-    letter-spacing: 5px;
+    font-size: clamp(1.125rem, 1.125rem + 0vw, 1.125rem);
   }
 }
 
@@ -333,7 +331,7 @@
 
   .header__title{
     margin-top: 85px;
-    letter-spacing: 7px;
+    font-size: clamp(1.125rem, 1.125rem + 0vw, 1.125rem);
     font-size: 157px;
     line-height: 129.53px;
   }
@@ -341,7 +339,7 @@
   .header__sub-title{
     margin-top: 110px;
     width: 491px;
-    letter-spacing: 1px;
+    font-size: clamp(1.125rem, 1.125rem + 0vw, 1.125rem);
   }
 
   .header__theme-menu-list{
@@ -352,7 +350,7 @@
 
   .block-title{
     margin: 10px;
-    letter-spacing: 1px;
+    font-size: clamp(1.125rem, 1.125rem + 0vw, 1.125rem);
   }
 
   .block-title-row{
@@ -365,12 +363,12 @@
 
   .sub-block-title{
     margin: 9px 10px 0 10px;
-    letter-spacing: 1px;
+    font-size: clamp(1.125rem, 1.125rem + 0vw, 1.125rem);
   }
 
   .sub-block-text{
     margin: 10px 10px 0 10px;
-    letter-spacing: 1px;
+    font-size: clamp(1.125rem, 1.125rem + 0vw, 1.125rem);
   }
 
   .low-attantion{
@@ -421,8 +419,7 @@
 @media (width >= 1024px){
   .footer-title{
     margin-top: 85px;
-    letter-spacing: 4px;
-    font-size: 167px;
+    font-size: clamp(9.8125rem, 9.8125rem + 0vw, 9.8125rem);
     line-height: 129.53px;
   }
 }
