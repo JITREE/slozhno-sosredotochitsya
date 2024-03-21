@@ -31,6 +31,7 @@
 }
 
 .header__rec{
+  margin-right: 3px;
   position: absolute;
   display: var(--display-rec, none);
   align-items: center;
@@ -74,9 +75,9 @@
 }
 
 .header__theme-menu{
+  margin-top: 4px;
+  margin-right: 10px;
   min-height: 238px;
-  margin-top: 3px;
-  margin-right: 15px;
   display: grid;
   align-content: center;
   justify-content: end;
@@ -121,7 +122,7 @@
 }
 
 .header__title{
-  margin: 0 10px 10px 10px;
+  margin-left: 10px;
   color: var(--head-title-color);
   text-shadow: 4px 4px 0px var(--accent-color);
   font-family: var(--font-family);
@@ -133,7 +134,7 @@
 
 .header__sub-title{
   margin: 0 10px;
-  margin-block-start: 65px;
+  margin-block-start: 54px;
   background-color: var(--accent-color);
   color: var(--title-text-color);
   font-family: var(--font-family);
@@ -178,13 +179,29 @@
 }
 
 .block-title{
-  margin-block-start: 40px;
+  margin-block-start: 35px;
   color: var(--title-color);
   font-family: var(--font-family);
   font-size: var(--font-size);
   font-style: normal;
   font-weight: 700;
   line-height: var(--line-height); /* 130% */
+}
+
+.block-title.block-title-column{
+  margin-top: 50px;
+}
+
+.block-title.block-title-row{
+  margin-top: 50px;
+}
+
+.sub-block-title.images__sub-block-title{
+  margin-top: 50px;
+}
+
+.image:not(:last-of-type){
+  margin-bottom: 10px;
 }
 
 .sub-block-title{
@@ -214,13 +231,20 @@
 }
 
 @media (width >= 768px){
+
+  .header__rec{
+    margin-top: -4px;
+    margin-right: -1px;
+  }
+
   .header__theme-menu{
-    padding-top: 194px;
-    padding-right: 20px;
+    margin-top: 0;
+    padding-top: 192px;
+    padding-right: 10px;
   }
 
   .header__theme-menu-list{
-    gap: 8px;
+    gap: 10px;
   }
 
   .header__rec{
@@ -239,7 +263,8 @@
   }
 
   .header__title{
-    margin-top: 180px;
+    margin-top: 174px;
+    margin-left: 0px;
     font-size: 120px;
     line-height: 99px;
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
@@ -265,18 +290,22 @@
   }
 
   .sub-block-title{
-    margin: 9px 10px 0 10px;
+    margin: 15px 10px 0 15px;
     font-size: clamp(1.125rem, 1.125rem + 0vw, 1.125rem);
   }
 
   .sub-block-text{
-    margin: 10px 10px 0 10px;
+    margin: 10px 10px 0 15px;
     font-size: clamp(1.125rem, 1.125rem + 0vw, 1.125rem);
   }
 
   .low-attantion{
-    margin-top: 90px;
-    margin-bottom: 85px;
+    margin-top: 80px;
+    margin-bottom: 65px;
+  }
+
+  .low-attantion .block:not(:last-of-type){
+    margin-bottom: 20px;
   }
 
   .low-attantion .block-title{
@@ -284,8 +313,27 @@
     margin-bottom: 20px;
   }
 
+  .low-attantion .sub-block-title{
+    margin-left: 10px;
+  }
+
+  .low-attantion .sub-block-text{
+    margin-left: 10px;
+  }
+
+  .block-title.block-title-row{
+    margin-top: 15px;
+    grid-row: 1/3;
+  }
+
+  .two-columns .sub-block:not(:last-of-type){
+    margin-bottom: 5px;
+  }
+
   .images{
-    margin-top: 115px;
+    margin-top: 30px;
+    margin-left: 10px;
+    margin-right: 10px;
     display: grid;
     gap: 20px;
     grid-template-columns: repeat(3, 1fr);
@@ -371,15 +419,27 @@
     font-size: clamp(1.125rem, 1.125rem + 0vw, 1.125rem);
   }
 
+  .two-columns{
+    grid-row-gap: 10px;
+  }
+
   .low-attantion{
-    margin-top: 79px;
-    margin-bottom: 45px;
+    margin-top: 81px;
+    margin-bottom: 65px;
     display:grid;
     grid-template-columns: repeat(3, 1fr);
+    grid-row-gap: 10px;
+  }
+
+  .block-title.block-title-column{
+    margin: 0;
+    margin-left: 10px;
+    width: 300px;
   }
 
   .images{
-    margin-top: 115px;
+    margin: 0;
+    margin-top: 20px;
   }
 }
 
@@ -390,7 +450,7 @@
 }
 
 .footer{
-  margin: 50px 10px 10px 10px;
+  margin: 20px 10px 10px 0px;
   display: flex;
   min-width: 375px;
   min-height: 668px;
@@ -411,14 +471,23 @@
 }
 
 @media (width >= 768px){
+  .footer{
+    margin-top: 40px;
+    margin-right: 0;
+  }
+
   .footer-title{
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   }
 }
 
 @media (width >= 1024px){
+  .footer{
+    margin: 0;
+    margin-top: 15px;
+  }
   .footer-title{
-    margin-top: 85px;
+    margin-top: 20px;
     font-size: clamp(9.8125rem, 9.8125rem + 0vw, 9.8125rem);
     line-height: 129.53px;
   }
