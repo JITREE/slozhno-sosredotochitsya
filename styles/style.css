@@ -31,15 +31,14 @@
 }
 
 .header__rec{
-  margin-right: 3px;
   position: absolute;
   display: var(--display-rec, none);
   align-items: center;
   gap: 10px;
   color: var(--accent-color, var(--accent-color));
   font-family: var(--font-family);
-  inset-block-start: var(--main-padding, 15px);
-  inset-inline-end: calc(var(--main-padding) + 8px);
+  top: var(--main-padding, 15px);
+  right: calc(var(--main-padding) + 8px);
   text-transform: uppercase;
 }
 
@@ -232,11 +231,6 @@
 
 @media (width >= 768px){
 
-  .header__rec{
-    margin-top: -4px;
-    margin-right: -1px;
-  }
-
   .header__theme-menu{
     margin-top: 0;
     padding-top: 192px;
@@ -248,8 +242,8 @@
   }
 
   .header__rec{
-    top: 25px;
-    right: 30px;
+    top: 21px;
+    right: 29px;
   }
 
   .decorated-zone::before{
@@ -330,6 +324,10 @@
     margin-bottom: 5px;
   }
 
+  .sub-block-title.images__sub-block-title{
+    margin: 50px 0 0 0;
+  }
+
   .images{
     margin-top: 30px;
     margin-left: 10px;
@@ -338,6 +336,11 @@
     gap: 20px;
     grid-template-columns: repeat(3, 1fr);
   }
+
+  .image:not(:last-of-type){
+    margin-bottom: 0;
+  }
+
   .images__sub-block-title{
     grid-column: 1/4;
   }
@@ -409,9 +412,18 @@
     grid-column: 1/4;
   }
 
+  .two-columns .sub-block:not(:last-of-type) {
+    margin-bottom: 12px;
+  }
+
   .sub-block-title{
     margin: 9px 10px 0 10px;
     font-size: clamp(1.125rem, 1.125rem + 0vw, 1.125rem);
+  }
+
+  .sub-block-sub-title{
+    margin-bottom: 13px;
+    margin: 14px 10px 10px 10px;
   }
 
   .sub-block-text{
@@ -420,7 +432,7 @@
   }
 
   .two-columns{
-    grid-row-gap: 10px;
+    grid-row-gap: 0px;
   }
 
   .low-attantion{
@@ -435,11 +447,6 @@
     margin: 0;
     margin-left: 10px;
     width: 300px;
-  }
-
-  .images{
-    margin: 0;
-    margin-top: 20px;
   }
 }
 
@@ -472,7 +479,7 @@
 
 @media (width >= 768px){
   .footer{
-    margin-top: 40px;
+    margin-top: 60px;
     margin-right: 0;
   }
 
@@ -484,10 +491,9 @@
 @media (width >= 1024px){
   .footer{
     margin: 0;
-    margin-top: 15px;
+    margin-top: 60px;
   }
   .footer-title{
-    margin-top: 20px;
     font-size: clamp(9.8125rem, 9.8125rem + 0vw, 9.8125rem);
     line-height: 129.53px;
   }
